@@ -18,6 +18,9 @@ https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivar
             - alpha>=0
           - Complementary slackness
             - alpha*h(x)=0
+      * 原函数f(x)是convex有全局最小化的条件:
+          * 不等式函数h(x)必须小于等于0，当不等式constraint h(x)也要求必须是convex，当h(x)>=0时，不能保证所有的h(x)是convex。convex sets交集仍然是convex，所以必须保证在f(x)为convex的前提下，h(x)也必须是convex。
+          * 等式约束g(x)必须是affine函数，因为等式条件可以被转换成大于条件和小于条件。只有affine函数同时满足这样两个条件的定义。  
       * 为什么要最大化constraints：https://www.quora.com/What-is-an-intuitive-explanation-of-the-KKT-conditions/answer/Balaji-Pitchai-Kannu
           - 对于不等式constraints: h(x)<=0, 所规定的constraints space, 最大可能值都是发生在最外围的边界上也就是h(x)=0的x的点。所以要选择最大化h(x).
           - 在所有边界上的点中找到，要优化目标函数L的tangent space。
